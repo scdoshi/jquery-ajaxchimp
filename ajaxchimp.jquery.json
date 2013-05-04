@@ -1,0 +1,33 @@
+{
+    "name": "ajaxchimp",
+    "title": "jQuery ajaxChimp for MailChimp",
+    "description": "Ajaxify your mailchimp form.",
+    "version": "1.0.0",
+    "main": "./jquery.ajaxchimp.js",
+    "author": {
+        "name": "Sidharth Doshi",
+        "url": "http://doshi.me/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/scdoshi/jquery-ajaxchimp.git"
+    },
+    "bugs": "https://github.com/scdoshi/jquery-ajaxchimp/issues",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/scdoshi/jquery-ajaxchimp/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">= 1.9.0"
+    },
+    "keywords": [
+        "mailchimp",
+        "ajax",
+        "email",
+        "form",
+        "jsonp"
+    ],
+    "ignore": []
+}
