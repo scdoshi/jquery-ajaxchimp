@@ -1,0 +1,12 @@
+{
+    "name": "ajaxchimp",
+    "version": "1.0.2",
+    "main": "./jquery.ajaxchimp.js",
+    "dependencies": {
+        "jquery": ">=1.9.0"
+    },
+    "ignore": [
+        "**/.*",
+        "./ajaxchimp.jquery.json"
+    ]
+}

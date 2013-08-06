@@ -16,7 +16,9 @@ curl -O https://raw.github.com/scdoshi/jquery-ajaxchimp/master/jquery.ajaxchimp.
 
 #### bower
 
-Installs via bower coming soon
+```
+bower install ajaxchimp
+```
 
 ## Requirements
 
