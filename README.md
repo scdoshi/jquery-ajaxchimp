@@ -1,6 +1,3 @@
-**THIS PLUGIN DOES NOT WORK BECUASE MAILCHIMP DOES NOT ALLOW CROSS-DOMAIN REQUESTS ANY MORE.**
-Don't start using the plugin and stop using it if you already are.
-
 # ajaxChimp
 
 AjaxChimp is a jQuery plugin that lets you ajaxify your mailchimp form.
