@@ -27,14 +27,33 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 (function ($) {
     'use strict';
 
+    $.ajaxChimp = {
+        responses: {
+            'We have sent you a confirmation email'                                             : 0,
+            'Please enter a value'                                                              : 1,
+            'An email address must contain a single @'                                          : 2,
+            'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
+            'The username portion of the email address is invalid (the portion before the @: )' : 4,
+            'This email address looks fake or invalid. Please enter a real email address'       : 5
+        },
+        translations: {
+            'en': null
+        },
+        init: function (selector, options) {
+            $(selector).ajaxChimp(options);
+        }
+
+    };
+
     $.fn.ajaxChimp = function (options) {
-        $(this).each(function(i,el) {
-            var form = $(el);
+        $(this).each(function(i, elem) {
+            var form = $(elem);
             var email = form.find('input[type=email]');
             var label = form.find('label[for=' + email.attr('id') + ']');
 
             var settings = $.extend({
-                'url': form.attr('action')
+                'url': form.attr('action'),
+                'language': 'en'
             }, options);
 
             var url = settings.url.replace('/post?', '/post-json?').concat('&c=?');
@@ -45,7 +64,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
             form.submit(function () {
                 function successCallback(resp) {
                     if (resp.result === 'success') {
-                        label.html('We have sent you a confirmation email.');
+                        msg = 'We have sent you a confirmation email';
                         label.removeClass('error').addClass('valid');
                         email.removeClass('error').addClass('valid');
                     } else {
@@ -72,8 +91,19 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                             index = -1;
                             msg = resp.msg;
                         }
-                        label.html(msg);
                     }
+
+                    // Translate and display message
+                    if (
+                        settings.language !== 'en' 
+                        && $.ajaxChimp.responses[msg]
+                        && $.ajaxChimp.translations
+                        && $.ajaxChimp.translations[settings.language]
+                        && $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]
+                    ) {
+                        msg = $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]];
+                    }
+                    label.html(msg);
 
                     label.show(2000);
                     if (settings.callback) {

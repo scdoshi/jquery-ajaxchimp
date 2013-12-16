@@ -2,9 +2,10 @@
 
 AjaxChimp is a jQuery plugin that lets you ajaxify your mailchimp form.
 
-Use this if you hate the jarring transition to the mailchimp website on submitting a mailchimp.
+Use this if you hate the jarring transition to the mailchimp website upon submitting an email address to mailchimp. 
 
 **Note**: This relies on an undocumented feature at mailchimp that uses JSONP to allow cross-domain ajax to work. You have been warned. (It has however, been around for at least 3 years that I know of, and probably more.)
+
 
 ## Install
 
@@ -20,6 +21,7 @@ curl -O https://raw.github.com/scdoshi/jquery-ajaxchimp/master/jquery.ajaxchimp.
 bower install ajaxchimp
 ```
 
+
 ## Requirements
 
 * jQuery 
@@ -28,55 +30,22 @@ bower install ajaxchimp
 
 ## Use
 
-#### Method 1: Use the mailchimp form
+#### On the mailchimp form element
 
 ```js
 $('form-selector').ajaxChimp();
 ```
 
-#### Method 2: Use a blank form with an input of type email
-
 ```js
-$('form-selector').ajaxChimp({
-    url: 'mailchimp-post-url'
-});
+$.ajaxChimp.init('form-selector');
 ```
 
-The mailchimp post url will look like this:
-
-```
-http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f
-```
-
-**Note**: The advantage of using method 1 is that even if ajax or javascript fails, the form will fallback and work as a normal mailchimp form.
-
-## Callback
-
-Optionally, you can specify a callback with either method to run after the
-ajax query to mailchimp succeeds or fails.
-
-```js
-$('form-selector').ajaxChimp({
-    callback: callbackfunction,
-    url: 'mailchimp-post-url'
-});
-```
-
-The JSONP response from mailchimp will be passed to the callback function
-
-```js
-function callbackFunction (resp) {
-    if (resp.result === 'success') {
-        // Do stuff
-    }
-}
-```
 
 ## Label
 
 If a label element is included in the form for the email input, then the success or error message will be displayed in it. A `valid` or `error` class will also be added accordingly.
 
-## Example Form (method 2)
+#### Example Form
 
 ```html
     <form id="mc-form">
@@ -91,3 +60,83 @@ $('#mc-form').ajaxChimp({
     url: 'http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'
 });
 ```
+
+
+## Options
+
+### Callback
+
+Optionally, you can specify a callback with either method to run after the
+ajax query to mailchimp succeeds or fails.
+
+```js
+$('form-selector').ajaxChimp({
+    callback: callbackfunction
+});
+```
+
+The JSONP response from mailchimp will be passed to the callback function
+
+```js
+function callbackFunction (resp) {
+    if (resp.result === 'success') {
+        // Do stuff
+    }
+}
+```
+
+### URL
+
+You can specify the mailchimp URL to post to (or override the url provided on the form element)
+
+```js
+$('form-selector').ajaxChimp({
+    url: 'mailchimp-post-url'
+});
+```
+
+The mailchimp post url will look like this:
+
+```
+http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f
+```
+
+### Language Support
+
+For success and error messages in different languages:
+
+    - Specify a language option and the translation dict.
+    - Include `jquery.ajaxchimp.langs.js` in the html file
+
+
+```js
+$('form-selector').ajaxChimp({
+    language: 'es'
+});
+
+
+If the language you want is not supported out of the box, or the translations are wrong, open a pull request with the required language and I will add it in. You can also add translations to your js file as follows:
+
+```js
+$.ajaxChimp.translations.es = {
+    0: 'Te hemos enviado un email de confirmación',
+    1: 'Por favor, introduzca un valor',
+    2: 'Una dirección de correo electrónico debe contener una sola @',
+    3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
+    4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
+    5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
+}
+```
+
+The response numbers are as follows:
+
+```js
+// Responses
+// 0: 'We have sent you a confirmation email'
+// 1: 'Please enter a value'
+// 2: 'An email address must contain a single @'
+// 3: 'The domain portion of the email address is invalid (the portion after the @: )'
+// 4: 'The username portion of the email address is invalid (the portion before the @: )'
+// 5: 'This email address looks fake or invalid. Please enter a real email address'
+```
+
