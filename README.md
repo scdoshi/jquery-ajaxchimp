@@ -105,17 +105,19 @@ http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=
 
 For success and error messages in different languages:
 
-    - Specify a language option and the translation dict.
-    - Include `jquery.ajaxchimp.langs.js` in the html file
+- Specify the language as an option.
+- Include `jquery.ajaxchimp.langs.js` in the html file
 
 
 ```js
 $('form-selector').ajaxChimp({
     language: 'es'
 });
+```
 
+**Note**: If the language you want is not supported out of the box, or the translations are wrong, open a pull request with the required language and I will add it in.
 
-If the language you want is not supported out of the box, or the translations are wrong, open a pull request with the required language and I will add it in. You can also add translations to your js file as follows:
+You can also add custom translations just for your website:
 
 ```js
 $.ajaxChimp.translations.es = {
