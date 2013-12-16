@@ -1,6 +1,6 @@
 # ajaxChimp Changelog
 
-### 1.1
+### 1.1.0
 
 15 Dec 2013
 
