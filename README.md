@@ -2,7 +2,7 @@
 
 AjaxChimp is a jQuery plugin that lets you ajaxify your mailchimp form.
 
-Use this if you hate the jarring transition to the mailchimp website upon submitting an email address to mailchimp. 
+Use this if you hate the jarring transition to the mailchimp website upon submitting an email address to mailchimp.
 
 **Note**: This relies on an undocumented feature at mailchimp that uses JSONP to allow cross-domain ajax to work. You have been warned. (It has however, been around for at least 3 years that I know of, and probably more.)
 
@@ -24,7 +24,7 @@ bower install ajaxchimp
 
 ## Requirements
 
-* jQuery 
+* jQuery
 
 **Note**: Developed with 1.9.1, but it should work with earlier versions. If it does or does not work with a particular version, please open an issue on github.
 
@@ -35,11 +35,6 @@ bower install ajaxchimp
 ```js
 $('form-selector').ajaxChimp();
 ```
-
-```js
-$.ajaxChimp.init('form-selector');
-```
-
 
 ## Label
 
