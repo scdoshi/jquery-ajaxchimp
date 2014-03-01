@@ -11,10 +11,8 @@
     // 4: 'The username portion of the email address is invalid (the portion before the @: )'
     // 5: 'This email address looks fake or invalid. Please enter a real email address'
 
-    // The translations below are from google translate, and may not be accurate.
-    // Pull requests with translations for other languages as well as corrections are welcome.
-
     $.ajaxChimp.translations = {
+        // Translation via https://github.com/lifeisfoo
         'it': {
             0: 'Ti abbiamo inviato una mail di conferma',
             1: 'Per favore inserisci una mail',
@@ -23,6 +21,9 @@
             4: 'Il nome della mail non è valido (la porzione prima della @: )',
             5: 'L\'indirizzo email sembra finto o non valido: per favore inseriscine uno reale'
         },
+
+        // The translations below are from google translate, and may not be accurate.
+        // Pull requests with translations for other languages as well as corrections are welcome.
         'de': {
             0: 'Wir haben Ihnen eine Bestätigungs-E-Mail verschickt',
             1: 'Bitte geben Sie einen Wert',
