@@ -49,4 +49,8 @@
             5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
         }
     };
+    $.ajaxChimp.translations.it.submitting = 'Registrazione in corso...';
+    $.ajaxChimp.translations.de.submitting = 'Aufnahme läuft...';
+    $.ajaxChimp.translations.es.submitting = 'Grabación en curso...';
+    $.ajaxChimp.translations.fr.submitting = 'Enregistrement en cours...';
 })(jQuery);
