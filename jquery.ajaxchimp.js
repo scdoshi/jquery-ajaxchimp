@@ -126,16 +126,19 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                         console.log('mailchimp ajax submit error: ' + text);
                     }
                 });
-                var loadingMsg = 'Submitting...';
+
+                // Translate and display submit message
+                var submitMsg = 'Submitting...';
                 if( 
                     settings.language !== 'en'
                     && $.ajaxChimp.translations
                     && $.ajaxChimp.translations[settings.language]
-                    && $.ajaxChimp.translations[settings.language].submitting
+                    && $.ajaxChimp.translations[settings.language]['submit']
                 ) {
-                    loadingMsg = $.ajaxChimp.translations[settings.language].submitting;
+                    submitMsg = $.ajaxChimp.translations[settings.language]['submit'];
                 }
-                label.html(loadingMsg).show(2000);
+                label.html(submitMsg).show(2000);
+
                 return false;
             });
         });

@@ -116,6 +116,7 @@ You can also add custom translations just for your website:
 
 ```js
 $.ajaxChimp.translations.es = {
+    'submit': 'Grabación en curso...',
     0: 'Te hemos enviado un email de confirmación',
     1: 'Por favor, introduzca un valor',
     2: 'Una dirección de correo electrónico debe contener una sola @',
@@ -125,15 +126,19 @@ $.ajaxChimp.translations.es = {
 }
 ```
 
-The response numbers are as follows:
+The mapping to english for mailchimp responses and the submit message are as follows:
 
 ```js
-// Responses
-// 0: 'We have sent you a confirmation email'
-// 1: 'Please enter a value'
-// 2: 'An email address must contain a single @'
-// 3: 'The domain portion of the email address is invalid (the portion after the @: )'
-// 4: 'The username portion of the email address is invalid (the portion before the @: )'
-// 5: 'This email address looks fake or invalid. Please enter a real email address'
+    // Submit Message
+    // 'submit': 'Submitting...'
+
+    // Mailchimp Responses
+    // 0: 'We have sent you a confirmation email'
+    // 1: 'Please enter a value'
+    // 2: 'An email address must contain a single @'
+    // 3: 'The domain portion of the email address is invalid (the portion after the @: )'
+    // 4: 'The username portion of the email address is invalid (the portion before the @: )'
+    // 5: 'This email address looks fake or invalid. Please enter a real email address'
+
 ```
 

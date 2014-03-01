@@ -3,7 +3,10 @@
 
     // ISO-693-1 Language codes: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
-    // Responses
+    // Submit Message
+    // 'submit': 'Submitting...'
+
+    // Mailchimp Responses
     // 0: 'We have sent you a confirmation email'
     // 1: 'Please enter a value'
     // 2: 'An email address must contain a single @'
@@ -14,6 +17,7 @@
     $.ajaxChimp.translations = {
         // Translation via https://github.com/lifeisfoo
         'it': {
+            'submit': 'Registrazione in corso...',
             0: 'Ti abbiamo inviato una mail di conferma',
             1: 'Per favore inserisci una mail',
             2: 'Un indirizzo valido contiene una sola @',
@@ -25,6 +29,7 @@
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'de': {
+            'submit': 'Aufnahme läuft...',
             0: 'Wir haben Ihnen eine Bestätigungs-E-Mail verschickt',
             1: 'Bitte geben Sie einen Wert',
             2: 'Eine E-Mail-Adresse muss ein einzelnes enthalten @',
@@ -33,6 +38,7 @@
             5: 'Diese E-Mail-Adresse sieht gefälscht oder ungültig. Bitte geben Sie eine echte E-Mail-Adresse'
         },
         'es': {
+            'submit': 'Grabación en curso...',
             0: 'Te hemos enviado un email de confirmación',
             1: 'Por favor, introduzca un valor',
             2: 'Una dirección de correo electrónico debe contener una sola @',
@@ -41,6 +47,7 @@
             5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
         },
         'fr': {
+            'submit': 'Enregistrement en cours...',
             0: 'Nous vous avons envoyé un e-mail de confirmation',
             1: 'S\'il vous plaît entrer une valeur',
             2: 'Une adresse e-mail doit contenir un seul @',
@@ -49,8 +56,4 @@
             5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
         }
     };
-    $.ajaxChimp.translations.it.submitting = 'Registrazione in corso...';
-    $.ajaxChimp.translations.de.submitting = 'Aufnahme läuft...';
-    $.ajaxChimp.translations.es.submitting = 'Grabación en curso...';
-    $.ajaxChimp.translations.fr.submitting = 'Enregistrement en cours...';
 })(jQuery);

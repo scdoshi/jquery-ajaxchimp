@@ -1,15 +1,17 @@
 # ajaxChimp Changelog
 
-### 1.1.0
+### 1.2.0 - 1/Mar/2014
 
-15 Dec 2013
+- Language support for submit message - [lifeisfoo](https://github.com/lifeisfoo)
+- Language file: Italian - [lifeisfoo](https://github.com/lifeisfoo)
 
-Language Support
-Multiple form support
-Minified files
+### 1.1.0 - 15/Dec/2013
 
-### 1.0.2
+- Multiple form support - [tobymarsden](https://github.com/tobymarsden)
+- Language Support
+- Language file: German, French, Spanish
+- Minified files
 
-06 Aug 2013
+### 1.0.2 - 06/Aug/2013
 
-Bower Support
+- Bower Support
