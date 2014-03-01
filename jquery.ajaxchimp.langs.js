@@ -15,6 +15,14 @@
     // Pull requests with translations for other languages as well as corrections are welcome.
 
     $.ajaxChimp.translations = {
+        'it': {
+            0: 'Ti abbiamo inviato una mail di conferma',
+            1: 'Per favore inserisci una mail',
+            2: 'Un indirizzo valido contiene una sola @',
+            3: 'Il dominio della tua mail non è valido (la porzione dopo la @: )',
+            4: 'Il nome della mail non è valido (la porzione prima della @: )',
+            5: 'L\'indirizzo email sembra finto o non valido: per favore inseriscine uno reale'
+        },
         'de': {
             0: 'Wir haben Ihnen eine Bestätigungs-E-Mail verschickt',
             1: 'Bitte geben Sie einen Wert',
