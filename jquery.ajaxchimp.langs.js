@@ -29,13 +29,13 @@
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'de': {
-            'submit': 'Aufnahme läuft...',
-            0: 'Wir haben Ihnen eine Bestätigungs-E-Mail verschickt',
-            1: 'Bitte geben Sie einen Wert',
-            2: 'Eine E-Mail-Adresse muss ein einzelnes enthalten @',
-            3: 'Der Domänenteil der E-Mail-Adresse ist ungültig (der Teil nach dem @:)',
-            4: 'Der Benutzername Teil der E-Mail-Adresse ist ungültig (der Teil vor dem @:)',
-            5: 'Diese E-Mail-Adresse sieht gefälscht oder ungültig. Bitte geben Sie eine echte E-Mail-Adresse'
+            'submit': 'Senden...',
+            0: 'Wir haben Ihnen eine Bestätigungs-E-Mail geschickt',
+            1: 'Bitte geben Sie Ihre E-Mail-Adresse ein',
+            2: 'Eine E-Mail-Adresse muss ein @ enthalten',
+            3: 'Der Domain-Teil der E-Mail-Adresse ist ungültig (der Teil nach dem @)',
+            4: 'Der Benutzername der E-Mail-Adresse ist ungültig (der Teil vor dem @)',
+            5: 'Diese E-Mail-Adresse scheint gefälscht oder ungültig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
         },
         'es': {
             'submit': 'Grabación en curso...',
