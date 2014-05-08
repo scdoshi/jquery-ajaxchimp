@@ -1,5 +1,10 @@
 # ajaxChimp Changelog
 
+### 1.3.0 - 8/May/2014
+
+- Transalations for success message now work
+- Language file: German (updated) - [Cube42](https://github.com/Cube42)
+
 ### 1.2.0 - 1/Mar/2014
 
 - Language support for submit message - [lifeisfoo](https://github.com/lifeisfoo)

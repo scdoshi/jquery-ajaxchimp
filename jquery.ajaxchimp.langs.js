@@ -25,9 +25,7 @@
             4: 'Il nome della mail non è valido (la porzione prima della @: )',
             5: 'L\'indirizzo email sembra finto o non valido: per favore inseriscine uno reale'
         },
-
-        // The translations below are from google translate, and may not be accurate.
-        // Pull requests with translations for other languages as well as corrections are welcome.
+        // Translation via https://github.com/Cube42
         'de': {
             'submit': 'Senden...',
             0: 'Wir haben Ihnen eine Bestätigungs-E-Mail geschickt',
@@ -37,6 +35,9 @@
             4: 'Der Benutzername der E-Mail-Adresse ist ungültig (der Teil vor dem @)',
             5: 'Diese E-Mail-Adresse scheint gefälscht oder ungültig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
         },
+
+        // The translations below are from google translate, and may not be accurate.
+        // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
             'submit': 'Grabación en curso...',
             0: 'Te hemos enviado un email de confirmación',
