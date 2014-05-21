@@ -66,7 +66,7 @@ ajax query to mailchimp succeeds or fails.
 
 ```js
 $('form-selector').ajaxChimp({
-    callback: callbackfunction
+    callback: callbackFunction
 });
 ```
 
