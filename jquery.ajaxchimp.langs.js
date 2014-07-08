@@ -35,7 +35,15 @@
             4: 'Der Benutzername der E-Mail-Adresse ist ungültig (der Teil vor dem @)',
             5: 'Diese E-Mail-Adresse scheint gefälscht oder ungültig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
         },
-
+        'nl': {
+            'submit': 'Versturen...',
+            0: 'Wij hebben u een bevestigings e-mail verzonden',
+            1: 'Vul uw e-mailadres in',
+            2: 'Dit e-mailadres is ongeldig. Een e-mailadres moet een @ bevatten',
+            3: 'Het domein van dit e-mailadres is ongeldig (het deel na de @)',
+            4: 'De gebruikersnaam van dit e-mail adres is ongeldig (het gedeelte voor de @)',
+            5: 'Dit e-mailadres is ongeldig. Vul een geldig e-mailadres in!'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
