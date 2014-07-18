@@ -35,7 +35,16 @@
             4: 'Der Benutzername der E-Mail-Adresse ist ungültig (der Teil vor dem @)',
             5: 'Diese E-Mail-Adresse scheint gefälscht oder ungültig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
         },
-
+        // Translation via https://github.com/designorant
+        'pl': {
+            'submit': 'Wysyłanie...',
+            0: 'Email z potwierdzeniem został wysłany',
+            1: 'Proszę podać adres email',
+            2: 'Adres email musi zawierać jeden znak @',
+            3: 'Część adresu z domeną jest niepoprawna (część po znaku @: )',
+            4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
+            5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
