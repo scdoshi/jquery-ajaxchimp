@@ -48,9 +48,9 @@
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
-            'submit': 'Grabación en curso...',
-            0: 'Te hemos enviado un email de confirmación',
-            1: 'Por favor, introduzca un valor',
+            'submit': 'Registro en curso...',
+            0: 'Te hemos enviado un correo de confirmación',
+            1: 'Por favor, introduce un valor',
             2: 'Una dirección de correo electrónico debe contener una sola @',
             3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
             4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
