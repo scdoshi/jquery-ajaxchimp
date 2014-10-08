@@ -45,17 +45,27 @@
             4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
             5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
         },
+        // Translation via https://github.com/nikossvnk
+        'es': {
+            'submit': 'Enviar...',
+            0: 'Le hemos enviado un correo de confirmación',
+            1: 'Por favor, introduzca un valor',
+            2: 'El correo electrónico debe contener sólo una @',
+            3: 'El dominio de la dirección de correo electrónico no es válido (la parte después de la @:)',
+            4: 'La parte-local de la dirección de correo electrónico no es válida (la parte antes de la @:)',
+            5: 'Esta dirección de correo electrónico parece falsa o inválida. Por favor, introduzca una dirección de correo electrónico válida'
+        },
+        'el': {
+            'submit': 'Υποβολή...',
+            0: 'Σας έχουμε στείλει ηλεκτρονικό μήνυμα επιβεβαίωσης',
+            1: 'Παρακαλούμε να εισαγάγετε μια τιμή',
+            2: 'Η διεύθυνση ηλεκτρονικού ταχυδρομείου πρέπει να περιέχει ένα μόνο @',
+            3: 'Ο τομέας της διεύθυνσης ηλεκτρονικού ταχυδρομείου δεν είναι έγκυρος (το τμήμα μετά το @:)',
+            4: 'Το όνομα χρήστη της διεύθυνσης ηλεκτρονικού ταχυδρομείου δεν είναι έγκυρο (το τμήμα πριν το @:)',
+            5: 'Αυτή η διεύθυνση ηλεκτρονικού ταχυδρομείου φαίνεται ψεύτικη ή άκυρη. Παρακαλούμε εισαγάγετε μια ορθή διεύθυνση ηλεκτρονικού ταχυδρομείου'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
-        'es': {
-            'submit': 'Grabación en curso...',
-            0: 'Te hemos enviado un email de confirmación',
-            1: 'Por favor, introduzca un valor',
-            2: 'Una dirección de correo electrónico debe contener una sola @',
-            3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
-            4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
-            5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
-        },
         'fr': {
             'submit': 'Enregistrement en cours...',
             0: 'Nous vous avons envoyé un e-mail de confirmation',
