@@ -70,8 +70,8 @@
             0: 'We hebben je een bevestigings email gestuurd',
             1: 'Gelieve een waarde in te vullen',
             2: 'Een email adres mag maar één @ bevatten',
-            3: 'Het domein-gedeelte van het email adres is ongeldig (het deel na de @:)',
-            4: 'Het gebruikersnaam-gedeelte van het email adres is ongeldig (het deel voor de @:)',
+            3: 'Het domein-gedeelte van het email adres is ongeldig (het deel na de @: )',
+            4: 'Het gebruikersnaam-gedeelte van het email adres is ongeldig (het deel voor de @: )',
             5: 'Dit email adres ziet er onecht of ongeldig uit, gelieve een correct email adres in te vullen'
         }
     };
