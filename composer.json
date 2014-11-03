@@ -1,0 +1,6 @@
+{
+    "name": "reactjs/react",
+    "description": "A JavaScript library for building user interfaces.",
+    "type": "component",
+    "license": "MIT"
+}
