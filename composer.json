@@ -1,6 +1,7 @@
 {
-    "name": "reactjs/react",
-    "description": "A JavaScript library for building user interfaces.",
+    "name": "scdoshi/jquery-ajaxchimp",
+    "title": "AjaxChimp
+    "description": "Use AJAX for your Mailchimp forms.",
     "type": "component",
     "license": "MIT"
 }
