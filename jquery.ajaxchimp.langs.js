@@ -45,6 +45,16 @@
             4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
             5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
         },
+        // Translation via https://github.com/vokseverk
+        'da': {
+            'submit': 'Sender...',
+            0: 'Vi har sendt en e-mail bekræftelse',
+            1: 'Indtast venligst en værdi',
+            2: 'En e-mail adresse skal indeholde eet @',
+            3: 'Domænedelen af e-mail adressen er ugyldig (det der kommer efter @: )',
+            4: 'Kontonavnet i e-mail adressen er ugyldig (det der kommer før @: )',
+            5: 'E-mail adressen ser ikke rigtig ud. Indtast venligst en korrekt e-mail adresse'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
