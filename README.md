@@ -12,7 +12,7 @@ Use this if you hate the jarring transition to the mailchimp website upon submit
 Just add the script to your webpage (along with jQuery ofcourse). Get it here:
 
 ```
-curl -O https://raw.github.com/scdoshi/jquery-ajaxchimp/master/jquery.ajaxchimp.js
+curl -O https://raw.githubusercontent.com/scdoshi/jquery-ajaxchimp/master/jquery.ajaxchimp.js
 ```
 
 #### bower
