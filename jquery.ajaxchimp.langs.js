@@ -64,6 +64,15 @@
             3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie après le @:)',
             4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
             5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
+        },
+        'nl': {
+            'submit': 'Versturen...',
+            0: 'We hebben je een bevestigings email gestuurd',
+            1: 'Gelieve een waarde in te vullen',
+            2: 'Een email adres mag maar één @ bevatten',
+            3: 'Het domein-gedeelte van het email adres is ongeldig (het deel na de @: )',
+            4: 'Het gebruikersnaam-gedeelte van het email adres is ongeldig (het deel voor de @: )',
+            5: 'Dit email adres ziet er onecht of ongeldig uit, gelieve een correct email adres in te vullen'
         }
     };
 })(jQuery);
