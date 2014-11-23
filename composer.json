@@ -1,0 +1,14 @@
+{
+    "name": "scdoshi/jquery-ajaxchimp",
+    "description": "Use AJAX for your Mailchimp forms.",
+    "type": "component",
+    "license": "MIT",
+    "extra": {
+        "component": {
+            "scripts": [
+                "jquery.ajaxchimp.js",
+                "jquery.ajaxchimp.langs.js"
+            ]
+        }
+    }
+}
