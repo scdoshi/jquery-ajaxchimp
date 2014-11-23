@@ -64,6 +64,15 @@
             3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie après le @:)',
             4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
             5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
+        },
+        'sv': {
+            'submit': 'Skickar...',
+            0: 'Vi har skickat dig ett bekräftelsemail',
+            1: 'Var vänlig fyll i formuläret',
+            2: 'E-postadressen måste innehålla @',
+            3: 'Felaktig epostadress (efter @)',
+            4: 'Felaktig epostadress (före @)',
+            5: 'Den här epostadressen ser felaktig ut, försök igen.'
         }
     };
 })(jQuery);
