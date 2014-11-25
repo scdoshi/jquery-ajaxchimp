@@ -45,6 +45,16 @@
             4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
             5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
         },
+        // Dutch translation via https://github.com/alsjeblaft
+        'nl': {
+            'submit': 'Verzenden...',
+            0: 'We hebben je een bevestigingsmail gestuurd.',
+            1: 'Voer een waarde in.',
+            2: 'Een e-mailadres moet een enkele @ bevatten.',
+            3: 'Het domein gedeelte van het e-mailadres is ongeldig (het gedeelte na de @).',
+            4: 'Het gebruikersnaam gedeelte van het e-mailadres is ongeldig (het gedeelte voor de @).',
+            5: 'Dit e-mailadres lijkt niet echt of ongeldig. Voer een geldig e-mailadres in.'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
