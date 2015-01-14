@@ -30,12 +30,13 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 
     $.ajaxChimp = {
         responses: {
-            'We have sent you a confirmation email'                                             : 0,
-            'Please enter a value'                                                              : 1,
-            'An email address must contain a single @'                                          : 2,
-            'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
-            'The username portion of the email address is invalid (the portion before the @: )' : 4,
-            'This email address looks fake or invalid. Please enter a real email address'       : 5
+            0: 'We have sent you a confirmation email',
+            1: 'Please enter a value',
+            2: 'An email address must contain a single @',
+            3: 'The domain portion of the email address is invalid',
+            4: 'The username portion of the email address is invalid',
+            5: 'This email address looks fake or invalid. Please enter a real email address',
+            6: 'is already subscribed to list'
         },
         translations: {
             'en': null
@@ -93,15 +94,31 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                         }
                     }
 
+
                     // Translate and display message
+                    var length = 0, msgnr;
+
+                    if(Object.keys){
+                        length = Object.keys($.ajaxChimp.responses).length
+                    }
+                    else {
+                        for (var key in $.ajaxChimp.responses){
+                            if ($.ajaxChimp.responses.hasOwnProperty(key)) {
+                              length++;
+                            }
+                        }
+                    }
+
+                    while(length--) {
+                        if (msg.indexOf($.ajaxChimp.responses[length])!==-1) {
+                            msgnr = length;
+                        }
+                    }
+
                     if (
-                        settings.language !== 'en'
-                        && $.ajaxChimp.responses[msg] !== undefined
-                        && $.ajaxChimp.translations
-                        && $.ajaxChimp.translations[settings.language]
-                        && $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]
+                        settings.language !== 'en' && msgnr > -1 && $.ajaxChimp.translations && $.ajaxChimp.translations[settings.language] && $.ajaxChimp.translations[settings.language][msgnr]
                     ) {
-                        msg = $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]];
+                        msg = $.ajaxChimp.translations[settings.language][msgnr];
                     }
                     label.html(msg);
 
@@ -123,19 +140,16 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                     success: successCallback,
                     dataType: 'jsonp',
                     error: function (resp, text) {
-                        console.log('mailchimp ajax submit error: ' + text);
+                        window.console.log('mailchimp ajax submit error: ' + text);
                     }
                 });
 
                 // Translate and display submit message
                 var submitMsg = 'Submitting...';
                 if(
-                    settings.language !== 'en'
-                    && $.ajaxChimp.translations
-                    && $.ajaxChimp.translations[settings.language]
-                    && $.ajaxChimp.translations[settings.language]['submit']
+                    settings.language !== 'en' && $.ajaxChimp.translations && $.ajaxChimp.translations[settings.language] && $.ajaxChimp.translations[settings.language].submit
                 ) {
-                    submitMsg = $.ajaxChimp.translations[settings.language]['submit'];
+                    submitMsg = $.ajaxChimp.translations[settings.language].submit;
                 }
                 label.html(submitMsg).show(2000);
 
