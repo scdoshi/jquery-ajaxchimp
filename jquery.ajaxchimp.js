@@ -107,7 +107,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 
                     label.show(2000);
                     if (settings.callback) {
-                        settings.callback(resp);
+                        settings.callback.call(form, resp);
                     }
                 }
 
