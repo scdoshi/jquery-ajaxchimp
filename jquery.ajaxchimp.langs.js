@@ -15,6 +15,16 @@
     // 5: 'This email address looks fake or invalid. Please enter a real email address'
 
     $.ajaxChimp.translations = {
+        // Translation via https://github.com/ahmadajmi
+        'ar': {
+          'submit': 'تنفيذ ....',
+          0: 'لقد قمنا بإرسال رسالة تأكيد بالبريد الإلكتروني. شكراً',
+          1: 'يرجى إدخال البريد الإلكتروني',
+          2: 'يجب أن يحتوي البريد إلكتروني علي رمز @',
+          3: 'الجزء الخاص بالدومين من عنوان البريد الإلكتروني غير صحيح (الجزء بعد رمز @)',
+          4: 'الجزء الاول من عنوان البريد الإلكتروني غير صالح (الجزء قبل رمز @)',
+          5: 'عنوان البريد الإلكتروني هذا يبدو وهمي أو غير صالح. يرجى إدخال عنوان بريد الإلكتروني حقيقي',
+        },
         // Translation via https://github.com/lifeisfoo
         'it': {
             'submit': 'Registrazione in corso...',
