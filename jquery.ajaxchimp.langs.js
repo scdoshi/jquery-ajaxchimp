@@ -73,7 +73,7 @@
             2: 'E-mailová adresa musí obsahovat přesně jeden znak @',
             3: 'Doména, kterou jste uvedli, je neplatná (část za znakem @: )',
             4: 'Jméno, které jste uvedli, je neplatné (část před znakem @: )',
-            5: 'Tato e-mailová adresa se jeví jako falešná nebo nebo neplatná. Prosím, vložte skutečný a platný e-mail'
+            5: 'Tato e-mailová adresa se jeví jako falešná nebo neplatná. Prosím, vložte skutečný a platný e-mail'
         },
     };
 })(jQuery);
