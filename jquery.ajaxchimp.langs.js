@@ -65,5 +65,15 @@
             4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
             5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
         }
+        // Translation via https://github.com/ladislavsulc
+        'cs': {
+            'submit': 'Zpracovávám...',
+            0: 'Právě jsme vám odeslali email pro potvrzení odběru',
+            1: 'Prosím, vložte platný e-mail',
+            2: 'E-mailová adresa musí obsahovat přesně jeden znak @',
+            3: 'Doména, kterou jste uvedli, je neplatná (část za znakem @: )',
+            4: 'Jméno, které jste uvedli, je neplatné (část před znakem @: )',
+            5: 'Tato e-mailová adresa se jeví jako falešná nebo nebo neplatná. Prosím, vložte skutečný a platný e-mail'
+        },
     };
 })(jQuery);
