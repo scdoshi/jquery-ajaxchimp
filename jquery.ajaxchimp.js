@@ -5,7 +5,7 @@ Author: Siddharth Doshi
 
 Use:
 ===
-$('#form_id').ajaxchimp(options);
+$('#form_id').ajaxChimp(options);
 
 - Form should have one <input> element with attribute 'type=email'
 - Form should have one label element with attribute 'for=email_input_id' (used to display error/success message)
