@@ -25,7 +25,15 @@ To get the mailchimp JSONP url (undocumented), change 'post?' to 'post-json?' an
 For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f&c=?',
 */
 
-(function ($) {
+;(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        module.exports = factory(require('jquery'));
+    } else {
+        factory(jQuery);
+    }
+}(function ($) {
     'use strict';
 
     $.ajaxChimp = {
@@ -144,4 +152,4 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
         });
         return this;
     };
-})(jQuery);
+}));
