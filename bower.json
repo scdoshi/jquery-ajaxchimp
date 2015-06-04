@@ -8,6 +8,6 @@
     "ignore": [
         "**/.*",
         "./ajaxchimp.jquery.json",
-        "./MINIFY.md"
+        "./src"
     ]
 }
