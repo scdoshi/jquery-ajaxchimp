@@ -89,7 +89,9 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                         return false;
                     }
                 });
-                return str.replace(matchedRegex, matchedTranslation);
+                if (matchedRegex && matchedTranslation) {
+                    return str.replace(matchedRegex, matchedTranslation);
+                }
             }
         }
         if (language !== 'en') {
