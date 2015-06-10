@@ -1,7 +1,7 @@
 $(document).ready( function () {
     $('.subscribe').attr('action', submit_url);
     var a = $('.subscribe').ajaxChimp();
-    a.done(function (data, textStatus, jqXhr) {
+    a.done(function (data, textStatus, jqXhr, form) {
         console.log(data);
     });
 

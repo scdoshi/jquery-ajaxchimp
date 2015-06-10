@@ -5,7 +5,7 @@ Author: Siddharth Doshi
 
 Use:
 ===
-$('#form_id').ajaxchimp(options);
+$('#form_id').ajaxChimp(options);
 
 - Form should have one <input> element with attribute 'type=email'
 - Form should have one label element with attribute 'for=email_input_id' (used to display error/success message)
@@ -167,10 +167,10 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                         success_div.text('').hide();
                         error_div.text(msg).show(500);
                     }
-                    deferred.resolve(data, textStatus, jqXHR);
+                    deferred.resolve(data, textStatus, jqXHR, form);
                 }).fail(function (jqXHR, textStatus, errorThrown) {
                     console.log('mailchimp ajax submit error: ' + errorThrown);
-                    deferred.reject(jqXHR, textStatus, errorThrown);
+                    deferred.reject(jqXHR, textStatus, errorThrown, form);
                 });
 
                 // Translate and display submit message
