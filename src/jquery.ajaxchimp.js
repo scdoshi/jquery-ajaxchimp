@@ -29,119 +29,165 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
     'use strict';
 
     $.ajaxChimp = {
-        responses: {
-            'We have sent you a confirmation email'                                             : 0,
-            'Please enter a value'                                                              : 1,
-            'An email address must contain a single @'                                          : 2,
-            'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
-            'The username portion of the email address is invalid (the portion before the @: )' : 4,
-            'This email address looks fake or invalid. Please enter a real email address'       : 5
+        regexPatterns: {
+            success: /Please confirm by clicking on the link we just sent to (.+@.+)/,
+            submit: /Submitting.../,
+            error: {
+                1: /Please enter a value/,
+                2: /An email address must contain a single @/,
+                3: /The domain portion of the email address is invalid (the portion after the @:(.+))/,
+                4: /The username portion of the email address is invalid (the portion before the @:(.+))/,
+                5: /This email address looks fake or invalid. Please enter a real email address/,
+                6: /.+\#6592.+/,
+                7: /(.+@.+) is already subscribed to list (.+)\..+/
+            }
         },
-        translations: {
-            'en': null
+        defaultTranslations: {
+            en: {
+                success: 'Please confirm by clicking on the link we just sent to $1',
+                submit: 'Submitting...',
+                error: {
+                    1: 'Please enter a value',
+                    2: 'An email address must contain a single @',
+                    3: 'The domain portion of the email address is invalid (the portion after the @: $1)',
+                    4: 'The username portion of the email address is invalid (the portion before the @: $1)',
+                    5: 'This email address looks fake or invalid. Please enter a real email address',
+                    6: 'Too many subscribe attempts for this email address. Please try again in about 5 minutes.',
+                    7: '$1 is already subscribed to list $2'
+                }
+            }
         },
+        translations: {},
+        defaultOptions: {
+            language: 'en',
+            errorDiv: '#mce-error-response',
+            successDiv: '#mce-success-response',
+        },
+        successMessage: 'Please confirm by clicking on the link we just sent to ',
+        submitMessage: 'Submitting...',
         init: function (selector, options) {
             $(selector).ajaxChimp(options);
         }
     };
 
+    $.ajaxChimp.getTranslation = function(str, language, string_key) {
+        if(
+            $.ajaxChimp.all_translations[language] &&
+            $.ajaxChimp.all_translations[language][string_key]
+        ) {
+            var regexPattern = $.ajaxChimp.regexPatterns[string_key];
+            var translation = $.ajaxChimp.all_translations[language][string_key];
+            if ($.type(regexPattern) === 'regexp') {
+                return str.replace(regexPattern, translation);
+            } else {
+                var matchedRegex, matchedTranslation;
+                $.each(regexPattern, function(id, regex) {
+                    if (translation[id] && str.match(regex) !== null){
+                        matchedRegex = regex;
+                        matchedTranslation = translation[id];
+                        // break the loop
+                        return false;
+                    }
+                });
+                return str.replace(matchedRegex, matchedTranslation);
+            }
+        }
+        if (language !== 'en') {
+            return $.ajaxChimp.getTranslation(str, 'en', string_key);
+        }
+        return str;
+    };
+
     $.fn.ajaxChimp = function (options) {
-        $(this).each(function(i, elem) {
+        $.ajaxChimp.all_translations = $.extend(
+            {},
+            $.ajaxChimp.defaultTranslations,
+            $.ajaxChimp.translations
+        );
+
+        var deferreds = $(this).map(function(i, elem) {
+            var deferred = new $.Deferred();
             var form = $(elem);
-            var email = form.find('input[type=email]');
-            var label = form.find('label[for=' + email.attr('id') + ']');
+            form.attr('novalidate', 'true');
 
+            // Create settings object from default and passed
+            //  in options
             var settings = $.extend({
-                'url': form.attr('action'),
-                'language': 'en'
-            }, options);
+                url: form.attr('action')
+            }, $.ajaxChimp.defaultOptions, options);
 
+            var email = form.find('input[type=email]');
+            email.attr('name', 'EMAIL');
+            var error_div = $(settings.errorDiv);
+            var success_div = $(settings.successDiv);
+
+            // Convert ajax call to jsonp
             var url = settings.url.replace('/post?', '/post-json?').concat('&c=?');
 
-            form.attr('novalidate', 'true');
-            email.attr('name', 'EMAIL');
+            form.on('submit', function (event) {
+                event.preventDefault();
 
-            form.submit(function () {
                 var msg;
-                function successCallback(resp) {
-                    if (resp.result === 'success') {
-                        msg = 'We have sent you a confirmation email';
-                        label.removeClass('error').addClass('valid');
-                        email.removeClass('error').addClass('valid');
-                    } else {
-                        email.removeClass('valid').addClass('error');
-                        label.removeClass('valid').addClass('error');
-                        var index = -1;
-                        try {
-                            var parts = resp.msg.split(' - ', 2);
-                            if (parts[1] === undefined) {
-                                msg = resp.msg;
-                            } else {
-                                var i = parseInt(parts[0], 10);
-                                if (i.toString() === parts[0]) {
-                                    index = parts[0];
-                                    msg = parts[1];
-                                } else {
-                                    index = -1;
-                                    msg = resp.msg;
-                                }
-                            }
-                        }
-                        catch (e) {
-                            index = -1;
-                            msg = resp.msg;
-                        }
-                    }
-
-                    // Translate and display message
-                    if (
-                        settings.language !== 'en'
-                        && $.ajaxChimp.responses[msg] !== undefined
-                        && $.ajaxChimp.translations
-                        && $.ajaxChimp.translations[settings.language]
-                        && $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]
-                    ) {
-                        msg = $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]];
-                    }
-                    label.html(msg);
-
-                    label.show(2000);
-                    if (settings.callback) {
-                        settings.callback(resp);
-                    }
-                }
-
-                var data = {};
+                var request_data = {};
                 var dataArray = form.serializeArray();
                 $.each(dataArray, function (index, item) {
-                    data[item.name] = item.value;
+                    request_data[item.name] = item.value;
                 });
 
                 $.ajax({
                     url: url,
-                    data: data,
-                    success: successCallback,
-                    dataType: 'jsonp',
-                    error: function (resp, text) {
-                        console.log('mailchimp ajax submit error: ' + text);
+                    data: request_data,
+                    dataType: 'jsonp'
+                }).done(function (data, textStatus, jqXHR) {
+                    if (data.result === 'success') {
+                        email.removeClass('error').addClass('valid');
+                        msg = $.ajaxChimp.getTranslation(
+                            ($.ajaxChimp.successMessage + request_data.EMAIL),
+                            settings.language,
+                            'success'
+                        );
+                        error_div.text('').hide();
+                        success_div.text(msg).show(500);
+                    } else{
+                        email.removeClass('valid').addClass('error');
+                        try {
+                            var parts = data.msg.split(' - ', 2);
+                            if (parts[1] === undefined) {
+                                msg = data.msg;
+                            } else {
+                                msg = parts[1];
+                            }
+                        }
+                        catch (e) {
+                            msg = data.msg;
+                        }
+                        msg = $.ajaxChimp.getTranslation(msg, settings.language, 'error');
+                        success_div.text('').hide();
+                        error_div.text(msg).show(500);
                     }
+                    deferred.resolve(data, textStatus, jqXHR);
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    console.log('mailchimp ajax submit error: ' + errorThrown);
+                    deferred.reject(jqXHR, textStatus, errorThrown);
                 });
 
                 // Translate and display submit message
-                var submitMsg = 'Submitting...';
-                if(
-                    settings.language !== 'en'
-                    && $.ajaxChimp.translations
-                    && $.ajaxChimp.translations[settings.language]
-                    && $.ajaxChimp.translations[settings.language]['submit']
-                ) {
-                    submitMsg = $.ajaxChimp.translations[settings.language]['submit'];
-                }
-                label.html(submitMsg).show(2000);
+                var submitMsg = $.ajaxChimp.getTranslation(
+                    $.ajaxChimp.submitMessage,
+                    settings.language,
+                    'submit'
+                );
+                error_div.text('').hide();
+                success_div.text(submitMsg).show(500);
 
-                return false;
+                // return false;
             });
+            return deferred;
         });
-        return this;
+        if (deferreds.length === 1){
+            return deferreds[0];
+        }
+        return deferreds;
+        // return this;
     };
 })(jQuery);
