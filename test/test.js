@@ -7,8 +7,8 @@ $(document).ready( function () {
 
     $('.subscribe-2').ajaxChimp({
         language: 'it',
-        errorDiv: '#email-response',
-        successDiv: '#email-response',
+        errorSelector: '#email-response',
+        successSelector: '#email-response',
         url: submit_url,
         token: 'b_88179bccb52af04eb42b11da2_0316d82e30'
     });
