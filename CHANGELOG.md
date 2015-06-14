@@ -1,5 +1,10 @@
 # ajaxChimp Changelog
 
+### 2.0.0 - 10/June/2015
+
+-
+-
+
 ### 1.3.0 - 8/May/2014
 
 - Transalations for success message now work
