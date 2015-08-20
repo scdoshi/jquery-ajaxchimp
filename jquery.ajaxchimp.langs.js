@@ -15,6 +15,16 @@
     // 5: 'This email address looks fake or invalid. Please enter a real email address'
 
     $.ajaxChimp.translations = {
+        // Translation via https://github.com/flaviof
+        'pt': {
+            'submit': 'Registo em progresso...',
+            0: 'Enviámos um email de confirmação para o seu email',
+            1: 'Por favor insira um valor',
+            2: 'Um endereço de email tem que ter um @',
+            3: 'O dominio do endereço de email inserido é inválido (a porção após o @: )',
+            4: 'O nome do email inserido é inválido (a porção antes do @: )',
+            5: 'O endereço de email é inválido ou falso. Por favor insira o email correto'
+        },
         // Translation via https://github.com/lifeisfoo
         'it': {
             'submit': 'Registrazione in corso...',
