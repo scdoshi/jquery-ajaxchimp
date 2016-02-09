@@ -59,11 +59,11 @@
         'fr': {
             'submit': 'Enregistrement en cours...',
             0: 'Nous vous avons envoyé un e-mail de confirmation',
-            1: 'S\'il vous plaît entrer une valeur',
+            1: 'S\'il vous plaît entrez une valeur',
             2: 'Une adresse e-mail doit contenir un seul @',
             3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie après le @:)',
             4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
-            5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
+            5: 'Cette adresse e-mail semble fausse ou non valide. S\'il vous plaît entrez une adresse email valide'
         }
     };
 })(jQuery);
