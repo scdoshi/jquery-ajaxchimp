@@ -45,6 +45,15 @@
             4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
             5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
         },
+        'pt': {
+            'submit': 'Em curso...',
+            0: 'Foi-lhe enviado um email de confirmação',
+            1: 'Por favor, introduza um valor',
+            2: 'O endereço de correio eletrónico deve conter um único símbolo @',
+            3: 'O domínio do endereço de correio eletrónico que inseriu não é válido (a parte a seguir a @:)',
+            4: 'O nome do endereço de correio eletrónico que inseriu não é válido (a parte que precede @:)',
+            5: 'Este endereço de correio eletrónico parece incorreto ou não é válido. Por favor, introduza um endereço de correio eletrónico válido'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
