@@ -123,7 +123,7 @@ $.ajaxChimp.translations.es = {
     3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
     4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
     5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
-}
+};
 ```
 
 The mapping to english for mailchimp responses and the submit message are as follows:
