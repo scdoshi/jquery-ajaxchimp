@@ -52,7 +52,7 @@ If a label element is included in the form for the email input, then the success
 
 ```js
 $('#mc-form').ajaxChimp({
-    url: 'http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'
+    url: '//blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'
 });
 ```
 
@@ -93,7 +93,7 @@ $('form-selector').ajaxChimp({
 The mailchimp post url will look like this:
 
 ```
-http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f
+//blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f
 ```
 
 ### Language Support
