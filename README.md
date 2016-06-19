@@ -52,7 +52,7 @@ If a label element is included in the form for the email input, then the success
 
 ```js
 $('#mc-form').ajaxChimp({
-    url: 'http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'
+    url: '//blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9'
 });
 ```
 
@@ -93,7 +93,7 @@ $('form-selector').ajaxChimp({
 The mailchimp post url will look like this:
 
 ```
-http://blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f
+//blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh99f
 ```
 
 ### Language Support
@@ -123,7 +123,7 @@ $.ajaxChimp.translations.es = {
     3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
     4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
     5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
-}
+};
 ```
 
 The mapping to english for mailchimp responses and the submit message are as follows:
