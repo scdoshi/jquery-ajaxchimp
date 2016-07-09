@@ -35,6 +35,16 @@
             4: 'Der Benutzername der E-Mail-Adresse ist ungültig (der Teil vor dem @)',
             5: 'Diese E-Mail-Adresse scheint gefälscht oder ungültig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
         },
+        // Translation via https://github.com/FarzadKarkhani
+        'fa': {
+            'submit': 'در حال ثبت...',
+            0: 'ایمیل تاییدیه برای شما ارسال شد',
+            1: 'ایمیل خود را وارد کنید',
+            2: 'ایمیل باید علامت @ داشته باشد',
+            3: 'دامنه آدرس ایمیل نادرست است (عبارت بعد از @)',
+            4: 'نام کاربری ایمیل نادرست است (عبارت قبل از @)',
+            5: 'آدرس ایمیل وارد شده جعلی یا نادرست است. لطفا یک آدرس ایمیل حقیقی ثبت نمایید'
+        },
         // Translation via https://github.com/designorant
         'pl': {
             'submit': 'Wysyłanie...',
