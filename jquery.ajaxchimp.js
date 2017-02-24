@@ -76,6 +76,11 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                             var parts = resp.msg.split(' - ', 2);
                             if (parts[1] === undefined) {
                                 msg = resp.msg;
+                                
+                                // "already subscribed" message can be lengthy. Shortens message output.
+                                if(msg.includes("already subscribed")) {
+                                	msg = "Already Subscribed! " + msg.substring(msg.indexOf("<a"));
+                                }
                             } else {
                                 var i = parseInt(parts[0], 10);
                                 if (i.toString() === parts[0]) {
