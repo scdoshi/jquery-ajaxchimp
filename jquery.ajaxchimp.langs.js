@@ -45,6 +45,15 @@
             4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
             5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
         },
+        'fr': {
+            'submit': 'Enregistrement en cours...',
+            0: 'Nous vous avons envoyé un courriel de confirmation',
+            1: 'S\'il vous plaît entrer une valeur',
+            2: 'Un courriel doit contenir un seul @',
+            3: 'La partie domaine du courriel n\'est pas valide (la partie après le @:)',
+            4: 'La partie nom d\'utilisateur du courriel n\'est pas valide (la partie avant le signe @:)',
+            5: 'Cette adresse e-mail semble fausse ou non valide. S\'il vous plaît entrer une adresse courriel valide'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
@@ -55,15 +64,6 @@
             3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
             4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
             5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
-        },
-        'fr': {
-            'submit': 'Enregistrement en cours...',
-            0: 'Nous vous avons envoyé un e-mail de confirmation',
-            1: 'S\'il vous plaît entrer une valeur',
-            2: 'Une adresse e-mail doit contenir un seul @',
-            3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie après le @:)',
-            4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
-            5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
         }
     };
 })(jQuery);
