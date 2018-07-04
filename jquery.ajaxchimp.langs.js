@@ -64,6 +64,16 @@
             3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie après le @:)',
             4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
             5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
+        },
+        // Translation via https://github.com/Smokietr
+        'tr': {
+            'submit': 'Gönderiliyor...',
+            0: 'Size bir onay e-postası gönderdik',
+            1: 'Bir değer girin',
+            2: 'E-Posta adresiniz tek bir @ işareti içermelidir.',
+            3: 'E-Posta adresinizin alan adı geçersiz ( @ işaretinden sonraki bölüm)',
+            4: 'E-Posta adresinizin kullanıcı adı bölümü geçersiz ( @ işaretinden önceki bölüm )',
+            5: 'Bu e-posta adresi sahte veya geçersiz görünüyor. Lütfen gerçek bir e-posta adresi giriniz.'
         }
     };
 })(jQuery);
