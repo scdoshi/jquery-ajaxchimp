@@ -45,6 +45,16 @@
             4: 'Część adresu z użytkownikiem jest niepoprawna (część przed znakiem @: )',
             5: 'Ten adres wygląda na nieprawdziwy lub niepoprawny. Proszę podać prawdziwy adres email.'
         },
+        // Translation via https://github.com/henrique-cesar
+        'br': {
+            'submit': 'Enviando...',
+            0: 'Nós te enviamos um e-mail de confirmação',
+            1: 'Por favor, insira um email',
+            2: 'O endereço de email deve conter apenas um @',
+            3: 'O domínio do endereço de email não é válido (a parte depois do @)',
+            4: 'O usuário do endereço de email não é válido (a parte antes do @)',
+            5: 'Este endereço de email não é válido. Por favor, insira um email real'
+        },
         // The translations below are from google translate, and may not be accurate.
         // Pull requests with translations for other languages as well as corrections are welcome.
         'es': {
